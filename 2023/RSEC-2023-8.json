@@ -1,7 +1,7 @@
 {
 	"schema_version": "1.6.0",
 	"id": "RSEC-2023-8",
-	"modified": "2023-10-20T19:31:49.353776Z",
+	"modified": "2024-10-08T17:55:09.322245Z",
 	"published": "2023-10-06T05:00:00.600Z",
 	"summary": "Denial of Service (DoS) vulnerabilities",
 	"details": "cmark-gfm, GitHub's extended version of the CommonMark library in C, suffers from multiple vulnerabilities affecting versions prior to 0.29.0.gfm.12. Various issues, including polynomial time complexity in multiple components like autolink extension, handle_close_bracket, and parsing of certain text patterns (leading `>`, `-`, `_`), may lead to unbounded resource exhaustion and denial of service. An out-of-bounds read in the `validate_protocol` function was also identified but is considered less harmful. Patches are available in versions 0.29.0.gfm.7, 0.29.0.gfm.10, and 0.29.0.gfm.12. Upgrading is advised, and users unable to upgrade should validate input from trusted sources.",
@@ -38,6 +38,8 @@
 				"1.7",
 				"1.8",
 				"1.9",
+				"1.9.1",
+				"1.9.2",
 				"1.8.0",
 				"1.8.1",
 				"1.9.0"
